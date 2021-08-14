@@ -1,0 +1,122 @@
+[commit]
+    cleanup = scissors
+[core]
+    whitespace = cr-at-eol
+[credential]
+    helper = manager
+[merge]
+    tool = kdiff3
+    keepBackup = false
+[mergetool "kdiff3"]
+    path = C:/Program Files/KDiff3/kdiff3.exe
+    prompt = false
+[mergetool "kdiff3NoAuto"]
+    cmd = kdiff3 --L1 \"$MERGED (Base)\" --L2 \"$MERGED (Local)\" --L3 \"$MERGED (Remote)\" -o \"$MERGED\" \"$BASE\" \"$LOCAL\" \"$REMOTE\"
+[gui]
+    fontdiff = -family \"DejaVu Sans Mono\" -size 9 -weight normal -slant roman -underline 0 -overstrike 0 gcwarning = false
+[fetch]
+    prune = true
+[alias]
+    aa = add .
+    ap = add --patch
+    b = branch
+    bd = branch -d
+    bdd = branch -D
+    bdr = push -d origin
+    bf = !git branch --list *$1*
+    bfa = !git branch --all --list *$1*
+    bfr = !git branch --remote --list *$1*
+    bm = branch -m
+    br = branch -r
+    c = commit
+    ca = commit --amend
+    cane = commit --amend --no-edit
+    cdry = clean -xdfn
+    cff = clean -xdf
+    co = checkout
+    cob = checkout -b
+    coh1 = checkout HEAD~1
+    com = checkout master
+    cop = checkout -
+    cp = cherry-pick
+    cpa = cherry-pick --abort
+    cpc = cherry-pick --continue
+    cpr = commit -m 'Addressing PR comments'
+    cwip = commit -m '==== WIP ===='
+    fo = fetch origin
+    l1 = log --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(bold blue)<%an>%Creset %C(green)(%cr)%Creset %C(bold reverse yellow)%D' --date=format:'%Y-%m-%d %H:%M' -n 10
+    l3 = log --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(bold blue)<%an>%Creset %C(green)(%cr)%Creset %C(bold reverse yellow)%D' --date=format:'%Y-%m-%d %H:%M' -n 30
+    l5 = log --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(bold blue)<%an>%Creset %C(green)(%cr)%Creset %C(bold reverse yellow)%D' --date=format:'%Y-%m-%d %H:%M' -n 50
+    l7 = log --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(bold blue)<%an>%Creset %C(green)(%cr)%Creset %C(bold reverse yellow)%D' --date=format:'%Y-%m-%d %H:%M' -n 70
+    l1nd = log --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(bold blue)<%an>%Creset %C(green)(%cr)%Creset' --date=format:'%Y-%m-%d %H:%M' -n 10
+    l3nd = log --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(bold blue)<%an>%Creset %C(green)(%cr)%Creset' --date=format:'%Y-%m-%d %H:%M' -n 30
+    l5nd = log --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(bold blue)<%an>%Creset %C(green)(%cr)%Creset' --date=format:'%Y-%m-%d %H:%M' -n 50
+    l7nd = log --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(bold blue)<%an>%Creset %C(green)(%cr)%Creset' --date=format:'%Y-%m-%d %H:%M' -n 70
+    lm1 = log --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(green)(%cr)%Creset %C(bold reverse yellow)%D' --date=format:'%Y-%m-%d %H:%M' --author=Mustafa -n 10
+    lm3 = log --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(green)(%cr)%Creset %C(bold reverse yellow)%D' --date=format:'%Y-%m-%d %H:%M' --author=Mustafa -n 30
+    lm5 = log --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(green)(%cr)%Creset %C(bold reverse yellow)%D' --date=format:'%Y-%m-%d %H:%M' --author=Mustafa -n 50
+    lm7 = log --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(green)(%cr)%Creset %C(bold reverse yellow)%D' --date=format:'%Y-%m-%d %H:%M' --author=Mustafa -n 70
+    lm1nd = log --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(green)(%cr)%Creset' --date=format:'%Y-%m-%d %H:%M' --author=Mustafa -n 10
+    lm3nd = log --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(green)(%cr)%Creset' --date=format:'%Y-%m-%d %H:%M' --author=Mustafa -n 30
+    lm5nd = log --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(green)(%cr)%Creset' --date=format:'%Y-%m-%d %H:%M' --author=Mustafa -n 50
+    lm7nd = log --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(green)(%cr)%Creset' --date=format:'%Y-%m-%d %H:%M' --author=Mustafa -n 70
+    lo1 = log origin/master --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(bold blue)<%an>%Creset %C(green)(%cr)%Creset %C(bold reverse yellow)%D' --date=format:'%Y-%m-%d %H:%M' -n 10
+    lo3 = log origin/master --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(bold blue)<%an>%Creset %C(green)(%cr)%Creset %C(bold reverse yellow)%D' --date=format:'%Y-%m-%d %H:%M' -n 30
+    lo5 = log origin/master --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(bold blue)<%an>%Creset %C(green)(%cr)%Creset %C(bold reverse yellow)%D' --date=format:'%Y-%m-%d %H:%M' -n 50
+    lo7 = log origin/master --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(bold blue)<%an>%Creset %C(green)(%cr)%Creset %C(bold reverse yellow)%D' --date=format:'%Y-%m-%d %H:%M' -n 70
+    lo1nd = log origin/master --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(bold blue)<%an>%Creset %C(green)(%cr)%Creset' --date=format:'%Y-%m-%d %H:%M' -n 10
+    lo3nd = log origin/master --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(bold blue)<%an>%Creset %C(green)(%cr)%Creset' --date=format:'%Y-%m-%d %H:%M' -n 30
+    lo5nd = log origin/master --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(bold blue)<%an>%Creset %C(green)(%cr)%Creset' --date=format:'%Y-%m-%d %H:%M' -n 50
+    lo7nd = log origin/master --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(bold blue)<%an>%Creset %C(green)(%cr)%Creset' --date=format:'%Y-%m-%d %H:%M' -n 70
+    lom1 = log origin/master --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(green)(%cr)%Creset %C(bold reverse yellow)%D' --date=format:'%Y-%m-%d %H:%M' --author=Mustafa -n 10
+    lom3 = log origin/master --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(green)(%cr)%Creset %C(bold reverse yellow)%D' --date=format:'%Y-%m-%d %H:%M' --author=Mustafa -n 30
+    lom5 = log origin/master --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(green)(%cr)%Creset %C(bold reverse yellow)%D' --date=format:'%Y-%m-%d %H:%M' --author=Mustafa -n 50
+    lom7 = log origin/master --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(green)(%cr)%Creset %C(bold reverse yellow)%D' --date=format:'%Y-%m-%d %H:%M' --author=Mustafa -n 70
+    lp = log --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(bold blue)<%an>%Creset %C(green)(%cr)%Creset %C(bold reverse yellow)%D' --date=format:'%Y-%m-%d %H:%M'
+    lpme = log --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(green)(%cr)%Creset %C(bold reverse yellow)%D' --date=format:'%Y-%m-%d %H:%M' --author=Mustafa
+    lpn = log --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(bold blue)<%an>%Creset %C(green)(%cr)%Creset %C(bold reverse yellow)%D' --date=format:'%Y-%m-%d %H:%M' -n
+    lpnd = log --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(bold blue)<%an>%Creset %C(green)(%cr)%Creset' --date=format:'%Y-%m-%d %H:%M'
+    lpnme = log --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(green)(%cr)%Creset %C(bold reverse yellow)%D' --date=format:'%Y-%m-%d %H:%M' --author=Mustafa -n
+    ma = merge --abort
+    mc = merge --continue
+    mom = merge origin/master
+    mt = mergetool
+    poh = push -u origin HEAD
+    pr = pull -r
+    r = reset
+    ra = rebase --abort
+    rc = rebase --continue
+    rh = reset --hard
+    rh1 = reset --hard HEAD~1
+    rho = reset --hard @{u}
+    ri = rebase --interactive
+    rl1 = reflog -n10
+    rl3 = reflog -n30
+    rl5 = reflog -n50
+    rl7 = reflog -n70
+    rm = rebase master
+    rom = rebase origin/master
+    rs1 = reset HEAD~1
+    rs2 = reset HEAD~2
+    rs3 = reset HEAD~3
+    rs4 = reset HEAD~4
+    rs5 = reset HEAD~5
+    rs6 = reset HEAD~6
+    rs7 = reset HEAD~7
+    rs8 = reset HEAD~8
+    rs9 = reset HEAD~9
+    rv = revert
+    s = status
+    sa0 = stash apply stash@{0}
+    sa1 = stash apply stash@{1}
+    sa2 = stash apply stash@{2}
+    sa3 = stash apply stash@{3}
+    sa4 = stash apply stash@{4}
+    sd = stash drop
+    sl = stash list
+    sp = stash pop
+    ss = stash save
+    td = tag --delete
+    tdr = push --delete origin
+    toc = tag --points-at
+    toh = tag --points-at HEAD
