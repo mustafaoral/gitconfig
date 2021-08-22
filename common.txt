@@ -13,7 +13,8 @@
 [mergetool "kdiff3NoAuto"]
     cmd = kdiff3 --L1 \"$MERGED (Base)\" --L2 \"$MERGED (Local)\" --L3 \"$MERGED (Remote)\" -o \"$MERGED\" \"$BASE\" \"$LOCAL\" \"$REMOTE\"
 [gui]
-    fontdiff = -family \"DejaVu Sans Mono\" -size 9 -weight normal -slant roman -underline 0 -overstrike 0 gcwarning = false
+    fontdiff = -family \"DejaVu Sans Mono\" -size 9 -weight normal -slant roman -underline 0 -overstrike 0
+    gcwarning = false
 [fetch]
     prune = true
 [alias]
@@ -106,7 +107,7 @@
     rs8 = reset HEAD~8
     rs9 = reset HEAD~9
     rv = revert
-    s = status
+    s = status -sb
     sa0 = stash apply stash@{0}
     sa1 = stash apply stash@{1}
     sa2 = stash apply stash@{2}
