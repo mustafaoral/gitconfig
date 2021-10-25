@@ -43,7 +43,7 @@
     cp = cherry-pick
     cpa = cherry-pick --abort
     cpc = cherry-pick --continue
-    cpr = commit -m 'Addressing PR comments'
+    cpr = "!f(){ args="${@}"; git commit -m \"PR update: $args\"; };f"
     cwip = commit -m '==== WIP ===='
     fo = fetch origin
     l1 = log --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(bold blue)<%an>%Creset %C(green)(%cr)%Creset %C(bold reverse yellow)%D' --date=format:'%Y-%m-%d %H:%M' -n 10
