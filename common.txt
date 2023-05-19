@@ -28,7 +28,9 @@
     bfa = !git branch --all --list *$1*
     bfr = !git branch --remote --list *$1*
     bm = branch -m
+    bo = branch --sort=-committerdate --format='| %(color:red)%(objectname:short)%(color:reset) | %(committerdate:format:%Y-%m-%d %H:%M) | %(refname:short) %(color:blue)<%(authorname)>%(color:reset) %(color:green)(%(committerdate:relative))%(color:reset) %(color:reverse yellow)%(upstream:track)%(color:reset)'
     br = branch -r
+    bv = branch -vv
     c = commit
     ca = commit --amend
     cam = "!f(){ args="${@}"; git commit --amend -m \"$args\"; };f"
