@@ -31,6 +31,7 @@
     br = branch -r
     c = commit
     ca = commit --amend
+    cam = "!f(){ args="${@}"; git commit --amend -m \"$args\"; };f"
     cane = commit --amend --no-edit
     cdry = clean -xdfn
     cff = clean -xdf
@@ -43,8 +44,9 @@
     cp = cherry-pick
     cpa = cherry-pick --abort
     cpc = cherry-pick --continue
-    cpr = "!f(){ args="${@}"; git commit -m \"PR update: $args\"; };f"
-    cwip = commit -m '==== WIP ===='
+    cpr = "!f(){ args="${@}"; git commit -m \"PR update: $args [skip ci]\"; };f"
+    cw = commit -m '==== WIP ===='
+    cws = commit -m '==== WIP ==== [skip ci]'
     fo = fetch origin
     l1 = log --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(bold blue)<%an>%Creset %C(green)(%cr)%Creset %C(bold reverse yellow)%D' --date=format:'%Y-%m-%d %H:%M' -n 10
     l3 = log --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(bold blue)<%an>%Creset %C(green)(%cr)%Creset %C(bold reverse yellow)%D' --date=format:'%Y-%m-%d %H:%M' -n 30
