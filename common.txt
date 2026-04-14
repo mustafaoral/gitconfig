@@ -35,8 +35,10 @@
     ca = commit --amend
     cam = "!f(){ args="${@}"; git commit --amend -m \"$args\"; };f"
     cane = commit --amend --no-edit
-    cdry = clean -xdfn
-    cff = clean -xdf
+    clfdry = clean -xdfn
+    clf = clean -xdf
+    clbodry = clean -xdfn */bin/
+    clbo = clean -xdf */bin/ */obj/
     cm = "!f(){ args="${@}"; git commit -m \"$args\"; };f"
     cms = "!f(){ args="${@}"; git commit -m \"$args [skip ci]\"; };f"
     co = checkout
@@ -52,7 +54,9 @@
     cpr = "!f(){ args="${@}"; git commit -m \"PR update: $args [skip ci]\"; };f"
     cw = commit -m '==== WIP ===='
     cws = commit -m '==== WIP ==== [skip ci]'
+    d = diff
     fo = fetch origin
+    gcn = gc --prune=now
     # log x
     logbase-x = "!f() { git log --pretty=format:'| %C(bold red)%h%Creset | %ad | %s %C(bold blue)<%an>%Creset %C(green)(%cr)%Creset %C(bold reverse yellow)%D' --date=format:'%Y-%m-%d %H:%M' -n $1; }; f"
     # log x no decoration
